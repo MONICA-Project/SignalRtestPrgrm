@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="195*"/>
+            <ColumnDefinition Width="119*"/>
+            <ColumnDefinition Width="83*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="260*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="158*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ConnectButt" Content="Connect" HorizontalAlignment="Left" Height="35" Margin="48,27,0,0" VerticalAlignment="Top" Width="147" Click="Button_Click"/>
+        <CheckBox x:Name="LogToFile" Content="Log to file" HorizontalAlignment="Left" Margin="260,37,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+        <Label Content="peoplewithwearablesUpdate:" HorizontalAlignment="Left" Margin="48,120,0,0" VerticalAlignment="Top"/>
+        <Label Content="SoundsensorUpdate:" HorizontalAlignment="Left" Height="28" Margin="90,146,0,0" VerticalAlignment="Top" Width="122" RenderTransformOrigin="0.373,0.556"/>
+        <Label Content="ZoneUpdate:" HorizontalAlignment="Left" Height="28" Margin="137,174,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Incidents:" HorizontalAlignment="Left" Height="28" Margin="154,202,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="1.293,0.302"/>
+        <Label Content="SoundIncidents:" HorizontalAlignment="Left" Height="28" Margin="120,226,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label Content="TemperatureUpdate:" HorizontalAlignment="Left" Height="28" Margin="90,254,0,0" VerticalAlignment="Top" Width="122" Grid.RowSpan="3"/>
+        <Label Content="HumidityUpdate:" HorizontalAlignment="Left" Height="28" Margin="113,18,0,0" VerticalAlignment="Top" Width="99" Grid.Row="2"/>
+        <Label Content="WindUpdate:" HorizontalAlignment="Left" Height="28" Margin="133,46,0,0" VerticalAlignment="Top" Width="79" Grid.Row="2"/>
+        <Label Content="AggregateUpdate:" HorizontalAlignment="Left" Height="28" Margin="104,74,0,0" VerticalAlignment="Top" Width="108" Grid.Row="2"/>
+        <Label Content="PeopleGateCounting:" HorizontalAlignment="Left" Height="28" Margin="90,102,0,0" VerticalAlignment="Top" Width="122" Grid.Row="2"/>
+        <Label x:Name="peoplewithwearablesUpdate" Content="0" HorizontalAlignment="Left" Margin="212,120,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="SoundsensorUpdate" Content="0" HorizontalAlignment="Left" Margin="212,146,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="ZoneUpdate" Content="0" HorizontalAlignment="Left" Margin="212,175,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="Incidents" Content="0" HorizontalAlignment="Left" Margin="212,201,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="SoundIncidents" Content="0" HorizontalAlignment="Left" Margin="212,225,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="TemperatureUpdate" Content="0" HorizontalAlignment="Left" Margin="212,256,0,0" VerticalAlignment="Top" Width="92" Grid.RowSpan="3"/>
+        <Label x:Name="HumidityUpdate" Content="0" HorizontalAlignment="Left" Margin="212,18,0,0" VerticalAlignment="Top" Width="92" Grid.Row="2"/>
+        <Label x:Name="WindUpdate" Content="0" HorizontalAlignment="Left" Margin="212,48,0,0" VerticalAlignment="Top" Width="92" Grid.Row="2"/>
+        <Label x:Name="AggregateUpdate" Content="0" HorizontalAlignment="Left" Margin="212,74,0,0" VerticalAlignment="Top" Width="92" Grid.Row="2"/>
+        <Label x:Name="PeopleGateCounting" Content="0" HorizontalAlignment="Left" Margin="212,102,0,0" VerticalAlignment="Top" Width="92" Grid.Row="2"/>
+        <Label Content="SoundheatmapUpdate:" HorizontalAlignment="Left" Margin="30.333,120,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="PeopleheatmapUpdate:" HorizontalAlignment="Left" Height="28" Margin="30.333,146,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.373,0.556" Grid.Column="1"/>
+        <Label x:Name="SoundheatmapUpdate" Content="0" HorizontalAlignment="Left" Margin="162.333,120,0,0" VerticalAlignment="Top" Width="92" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label x:Name="PeopleheatmapUpdate" Content="0" HorizontalAlignment="Left" Margin="162.333,146,0,0" VerticalAlignment="Top" Width="92" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="SignalRUrl" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="18" Margin="260,71,0,0" TextWrapping="Wrap" Text="https://127.0.0.1:8800/hub/signalR/COPUpdate" VerticalAlignment="Top" Width="506" TextChanged="TextBox_TextChanged"/>
+
+    </Grid>
+</Window>
